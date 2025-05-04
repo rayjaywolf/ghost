@@ -137,6 +137,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 a,
 button {
   cursor: pointer;

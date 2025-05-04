@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { InteractiveGridPattern } from '@/components/magicui/interactive-grid-pattern'
 import { AnimatedShinyText } from '@/components/magicui/animated-shiny-text'
 import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
+import { IconCloud } from '@/components/magicui/icon-cloud'
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,7 @@ import {
 } from "@/components/ui/table";
 import { CheckIcon, MinusIcon } from "lucide-react";
 import React from "react";
+import Marquee from "@/components/ui/marquee";
 
 interface PlanFeature {
   type: string;
@@ -110,7 +112,29 @@ const planFeatures: PlanFeature[] = [
   },
 ];
 
+const slugs = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "nodedotjs",
+  "cplusplus",
+  "python",
+  "sharp",
+  "ruby",
+  "php",
+  "swift",
+  "kotlin",
+  "go",
+  "rust",
+  "postgresql",
+];
+
 const Header = () => {
+
   return (
     <header className="flex items-center justify-between px-16 py-3 bg-[#FEFC00]">
       <div className="flex items-center">
@@ -118,9 +142,9 @@ const Header = () => {
       </div>
 
       <nav className="flex items-center gap-8 text-lg font-bold">
-        <a className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">ABOUT</a>
-        <a className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">FEATURES</a>
-        <a className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">PRICING</a>
+        <a href="#about" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">ABOUT</a>
+        <a href="#features" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">FEATURES</a>
+        <a href="#pricing" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">PRICING</a>
       </nav>
 
       <div className="flex items-center gap-4">
@@ -147,7 +171,22 @@ const Header = () => {
   )
 }
 
+const LanguageIconCard = ({ src, alt }: { src: string; alt: string }) => (
+  <div
+    tabIndex={0}
+    aria-label={alt}
+    className="flex items-center justify-center w-20 h-20 bg-[#232326] rounded-xl border border-white/10 shadow-md mx-2 focus:outline-none focus:ring-2 focus:ring-[#FEFC00]"
+  >
+    <img src={src} alt={alt} className="w-12 h-12 object-contain" />
+  </div>
+)
+
 export default function Home() {
+
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
+  );
+
   return (
     <div className="min-h-screen relative bg-background">
 
@@ -206,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="relative flex flex-col items-center justify-center py-20 bg-[#1b1b1b] border-t border-white/10 px-20 w-full h-full">
+      <section id="features" className="relative flex flex-col items-center justify-center py-20 bg-[#1b1b1b] border-t border-white/10 px-20 w-full h-full">
         <div className='absolute inset-0 flex justify-center items-center blur-[180px] z-0'>
           <div
             className="absolute top-[621px] bottom-[289px] w-full max-w-[200px] opacity-60 bg-[#a84ddf] [background-image:conic-gradient(from_180deg_at_50%_50%,#0aefff_-69.37deg,#0f83ff_31.88deg,#b056e7_120deg,#ff9966_204.37deg,#0aefff_290.63deg,#0f83ff_391.87deg)]"
@@ -215,12 +254,14 @@ export default function Home() {
         </div>
         <div className='w-full flex flex-row z-10'>
           <div className='w-1/2'>
-            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-3xl border border-white/10'></div>
+            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-lg border border-white/10'>
+              <video src="/solution.mov" autoPlay muted loop className='w-full h-full object-cover rounded-lg' />
+            </div>
             <h2 className='text-white text-left text-3xl font-bold tracking-wider mb-4'>
               Solution Generation
             </h2>
             <p className='text-white/80 max-w-lg text-left text-lg font-inter'>
-              Ghost uses AI to generate solutions to coding problems. It can handle a wide range of problems, easy to hard.
+              Take screenshot of the problem and let Ghost generate a solution for you with a step by step explanation.
             </p>
           </div>
           <div className='w-1/2'></div>
@@ -229,17 +270,42 @@ export default function Home() {
           <div className='w-1/2'>
           </div>
           <div className='w-1/2'>
-            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-3xl border border-white/10'></div>
+            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-lg border border-white/10'>
+              <video src="/window-management.mp4" autoPlay muted loop className='w-full h-full object-cover rounded-lg' />
+            </div>
             <h2 className='text-white text-right text-3xl font-bold tracking-wider mb-4'>
-              Debugging Assistance
+              Window Management
             </h2>
             <p className='text-white/80 ml-auto max-w-lg text-right text-lg font-inter'>
-              Ghost uses advanced AI to help you debug your code. It can handle a wide range of problems, from easy to hard.
+              Ghost can be moved around your screen, and resized to your liking without interfering with your workflow.
             </p></div>
         </div>
         <div className='w-full flex flex-row -mt-20 z-10'>
           <div className='w-1/2'>
-            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-3xl border border-white/10'></div>
+            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-lg border border-white/10 flex items-center'>
+              <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+                {(() => {
+                  const firstRow = images.slice(0, Math.ceil(images.length / 2))
+                  const secondRow = images.slice(Math.ceil(images.length / 2))
+                  return (
+                    <>
+                      <Marquee pauseOnHover className='[--duration:20s]'>
+                        {firstRow.map((src, idx) => (
+                          <LanguageIconCard key={src} src={src} alt={slugs[idx]} />
+                        ))}
+                      </Marquee>
+                      <Marquee reverse pauseOnHover className='[--duration:20s]'>
+                        {secondRow.map((src, idx) => (
+                          <LanguageIconCard key={src} src={src} alt={slugs[idx + firstRow.length]} />
+                        ))}
+                      </Marquee>
+                      <div className='pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#1e1e1e]'></div>
+                      <div className='pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#1e1e1e]'></div>
+                    </>
+                  )
+                })()}
+              </div>
+            </div>
             <h2 className='text-white text-left text-3xl font-bold tracking-wider mb-4'>
               Multi-language Support
             </h2>
@@ -253,7 +319,7 @@ export default function Home() {
           <div className='w-1/2'>
           </div>
           <div className='w-1/2'>
-            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-3xl border border-white/10'></div>
+            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-lg border border-white/10'></div>
             <h2 className='text-white text-right text-3xl font-bold tracking-wider mb-4'>
               Time/Space Complexity Analysis
             </h2>
@@ -261,19 +327,27 @@ export default function Home() {
               Ghost analyzes the time and space complexity of your code, helping you understand how efficient it is.
             </p></div>
         </div>
-        <div className='w-full flex flex-row mt-20 gap-3 z-10'>
+        <div className='w-full flex flex-row mt-20 gap-2 z-10'>
           <div className='w-1/2'>
-            <div className='bg-[#1e1e1e] h-[400px] w-full rounded-3xl border border-white/10'>
-              <h2 className='text-white text-left text-3xl font-bold tracking-wider mb-4 pl-16 pt-8'>
+            <div className='bg-[#151718] h-[400px] w-full rounded-lg  border border-white/10 relative'>
+              <h2 className='text-white text-left text-3xl font-bold tracking-wider mb-4 pl-16 pt-40'>
                 All while being
               </h2>
+              <p className='text-white/80 max-w-lg text-left text-lg font-inter pl-25'>
+                (What you see)
+              </p>
+              <Image src="/visible.png" alt="Ghost" width={320} height={320} className='absolute bottom-0 right-0' />
             </div>
           </div>
           <div className='w-1/2'>
-            <div className='bg-[#1e1e1e] h-[400px] w-full rounded-3xl border border-white/10'>
-              <h2 className='text-white text-right text-3xl font-bold tracking-wider mb-4 pr-16 pt-8'>
+            <div className='bg-[#151718] h-[400px] w-full rounded-lg border border-white/10 relative'>
+              <h2 className='text-white text-right text-3xl font-bold tracking-wider mb-4 pr-16 pt-40'>
                 Entirely <span className='text-[#FEFC00]'>invisible</span>
               </h2>
+              <p className='text-white/80 max-w-lg text-right text-lg font-inter'>
+                (What they see)
+              </p>
+              <Image src="/invisible.png" alt="Ghost" width={320} height={320} className='absolute bottom-0 left-0' />
             </div>
           </div>
         </div>
@@ -356,7 +430,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section className="relative flex flex-col items-center justify-center py-12 bg-[#181818] w-full overflow-hidden border-t border-white/10 px-20">
+      <section id="pricing" className="relative flex flex-col items-center justify-center py-12 bg-[#181818] w-full overflow-hidden border-t border-white/10 px-20">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#FEFC00]/20 via-[#a84ddf]/10 to-transparent rounded-full blur-3xl opacity-60" />
         </div>
@@ -474,7 +548,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="w-full bg-[#FEFC00] border-t border-white/10 py-8 px-4 flex flex-col md:flex-row items-center justify-between mt-0 gap-4">
+      <footer className="w-full bg-[#FEFC00] border-t border-white/10 py-8 px-20 flex flex-col md:flex-row items-center justify-between mt-0 gap-4">
         <div className="flex items-center justify-center md:justify-start w-full md:w-auto mb-2 md:mb-0">
           <Image src="/ghost.png" alt="Ghost Logo" width={70} height={70} />
         </div>
