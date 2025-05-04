@@ -9,7 +9,7 @@ import CopyMacCommand from '../../components/CopyMacCommand'
 const windowsDownload = {
     label: 'Windows',
     description: 'Download for Windows 10/11',
-    link: 'https://github.com/rayjaywolf/ghost/releases/download/v1.0.0/Ghost.Setup.1.2.0.exe',
+    link: '#',
     button: 'Download .exe',
 }
 
@@ -36,22 +36,24 @@ const handleCopyCommand = () => {
 }
 
 const Header = () => (
-    <header className="flex flex-col md:flex-row items-center justify-between px-4 md:px-16 py-2 md:py-3 bg-[#FEFC00] gap-2 md:gap-0">
+    <header className="flex items-center justify-between px-16 py-3 bg-[#FEFC00]">
         <div className="flex items-center">
             <Link href="/">
-                <Image src="/ghost.png" alt="Ghost Logo" width={64} height={64} className="w-16 h-16 md:w-[100px] md:h-[100px]" />
+                <Image src="/ghost.png" alt="Ghost Logo" width={100} height={100} />
             </Link>
         </div>
-        <nav className="flex flex-col md:flex-row items-center gap-2 md:gap-8 text-base md:text-lg font-bold mt-2 md:mt-0">
-            <a href="#features" className="tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Features</a>
-            <a href="#shortcuts" className="tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Shortcuts</a>
-            <a href="#pricing" className="tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Pricing</a>
+
+        <nav className="flex items-center gap-8 text-lg font-bold">
+            <a href="#features" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Features</a>
+            <a href="#shortcuts" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Shortcuts</a>
+            <a href="#pricing" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Pricing</a>
         </nav>
-        <div className="flex items-center gap-2 md:gap-4 mt-2 md:mt-0">
+
+        <div className="flex items-center gap-4">
             <a href="/download">
-                <button className="flex items-center gap-2 md:gap-3 px-4 py-2 bg-[#1E1E1E] text-white rounded-lg hover:opacity-90 font-bold min-h-12 min-w-24 text-base md:text-lg">
+                <button className="flex items-center gap-3 px-4 py-2 bg-[#1E1E1E] text-white rounded-lg hover:opacity-90 font-bold">
                     Download
-                    <span className="flex gap-1 md:gap-2 items-center">
+                    <span className="flex gap-2 items-center">
                         <svg className="w-4 h-4" viewBox="0 0 19.132 19.132" fill="none">
                             <g>
                                 <g>
@@ -73,11 +75,11 @@ const Header = () => (
 )
 
 const Footer = () => (
-    <footer className="w-full bg-[#FEFC00] border-t border-white/10 py-6 md:py-8 px-4 md:px-20 flex flex-col md:flex-row items-center justify-between mt-0 gap-2 md:gap-4">
+    <footer className="w-full bg-[#FEFC00] border-t border-white/10 py-8 px-20 flex flex-col md:flex-row items-center justify-between mt-0 gap-4">
         <div className="flex items-center justify-center md:justify-start w-full md:w-auto mb-2 md:mb-0">
-            <Image src="/ghost.png" alt="Ghost Logo" width={40} height={40} className="w-10 h-10 md:w-[70px] md:h-[70px]" />
+            <Image src="/ghost.png" alt="Ghost Logo" width={70} height={70} />
         </div>
-        <nav className="flex flex-col md:flex-row gap-2 md:gap-6 items-center justify-center w-full md:w-auto mb-2 md:mb-0">
+        <nav className="flex flex-row gap-6 items-center justify-center w-full md:w-auto mb-2 md:mb-0">
             <a
                 href="#"
                 tabIndex={0}
@@ -133,43 +135,42 @@ const MacIcon = () => (
 const DownloadPage = () => (
     <div className="min-h-screen flex flex-col bg-background">
         <Header />
-        <main className="flex flex-col items-center justify-center flex-1 py-8 md:py-12 px-2 sm:px-4 md:px-8 bg-[#1e1e1e]">
-            <h1 className="text-3xl md:text-5xl font-bold tracking-wider text-white mb-3 md:mb-4 text-center">Download Ghost</h1>
-            <p className="text-base md:text-lg text-white/70 font-inter mb-6 md:mb-10 text-center max-w-2xl">Choose your platform and follow the instructions to get started with Ghost.</p>
-            <div className="w-full flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center">
-                <div className="flex items-start gap-4 md:gap-6 bg-[#232326] border border-white/10 rounded-2xl px-4 md:px-8 py-6 md:py-8 w-full max-w-xs md:max-w-none">
+        <main className="flex flex-col items-center justify-center flex-1 py-12 px-4 bg-[#1e1e1e]">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-wider text-white mb-4 text-center">Download Ghost</h1>
+            <p className="text-lg text-white/70 font-inter mb-10 text-center max-w-2xl">Choose your platform and follow the instructions to get started with Ghost.</p>
+            <div className="w-full flex gap-12 items-center justify-center">
+                <div className="flex items-start gap-6 bg-[#232326] border border-white/10 rounded-2xl px-8 py-8">
                     <div className="mt-2">
                         <WindowsIcon />
                     </div>
-                    <div className="flex-1 min-w-0">
-                        <div className="text-xl md:text-2xl font-bold text-white mb-1">{windowsDownload.label}</div>
-                        <div className="text-white/70 mb-3 md:mb-4 text-sm md:text-base">{windowsDownload.description}</div>
+                    <div className="flex-1">
+                        <div className="text-2xl font-bold text-white mb-1">{windowsDownload.label}</div>
+                        <div className="text-white/70 mb-4">{windowsDownload.description}</div>
                         <a
                             href={windowsDownload.link}
                             tabIndex={0}
                             aria-label={windowsDownload.button + ' for Windows'}
                         >
-                            <button className="w-full px-4 py-2 bg-[#FEFC00] text-[#1E1E1E] rounded-full font-bold hover:opacity-90 transition-opacity tracking-wide focus:outline-none focus:ring-2 focus:ring-[#1E1E1E] text-base md:text-lg">
+                            <button className="px-6 py-2 bg-[#FEFC00] text-[#1E1E1E] rounded-full font-bold hover:opacity-90 transition-opacity tracking-wide focus:outline-none focus:ring-2 focus:ring-[#1E1E1E]">
                                 {windowsDownload.button}
                             </button>
                         </a>
                     </div>
                 </div>
-                <div className="flex items-start gap-4 md:gap-6 bg-[#232326] border border-white/10 rounded-2xl px-4 md:px-8 py-6 md:py-8 w-full max-w-xs md:max-w-none">
+                <div className="flex items-start gap-6 bg-[#232326] border border-white/10 rounded-2xl px-8 py-8">
                     <MacIcon />
-                    <div className="flex-1 min-w-0">
-                        <div className="text-xl md:text-2xl font-bold text-white mb-1">Mac</div>
-                        <div className="text-white/70 mb-3 md:mb-4 text-sm md:text-base">Download for macOS (Intel & Apple Silicon/ARM)</div>
-                        <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                    <div className="flex-1">
+                        <div className="text-2xl font-bold text-white mb-1">Mac</div>
+                        <div className="text-white/70 mb-4">Download for macOS (Intel & Apple Silicon/ARM)</div>
+                        <div className="flex flex-col sm:flex-row gap-4">
                             {macDownloads.map((d) => (
                                 <a
                                     key={d.label}
                                     href={d.link}
                                     tabIndex={0}
                                     aria-label={d.button + ' for ' + d.label}
-                                    className="w-full"
                                 >
-                                    <button className="w-full px-4 py-2 bg-[#FEFC00] text-[#1E1E1E] rounded-full font-bold hover:opacity-90 transition-opacity tracking-wide focus:outline-none focus:ring-2 focus:ring-[#1E1E1E] text-base md:text-lg">
+                                    <button className="px-6 py-2 bg-[#FEFC00] text-[#1E1E1E] rounded-full font-bold hover:opacity-90 transition-opacity tracking-wide focus:outline-none focus:ring-2 focus:ring-[#1E1E1E]">
                                         {d.button}
                                     </button>
                                 </a>
