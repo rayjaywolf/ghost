@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { InteractiveGridPattern } from '@/components/magicui/interactive-grid-pattern'
 import { AnimatedShinyText } from '@/components/magicui/animated-shiny-text'
 import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
@@ -148,7 +149,7 @@ const Header = () => {
       </nav>
 
       <div className="flex items-center gap-4">
-        <a href="https://github.com/rayjaywolf/ghost/releases/download/v1.0.0/Ghost-1.2.0-arm64.dmg">
+        <Link href="/download">
           <button className="flex items-center gap-3 px-4 py-2 bg-[#1E1E1E] text-white rounded-lg hover:opacity-90 font-bold">
             Download
             <span className="flex gap-2 items-center">
@@ -167,7 +168,7 @@ const Header = () => {
               </svg>
             </span>
           </button>
-        </a>
+        </Link>
       </div>
     </header>
   )
@@ -216,11 +217,11 @@ export default function Home() {
             <span className="line-through opacity-50 font-inter">Cheat</span> <span className="text-[#FEFC00] font-inter">Ace</span> your technical interviews with our invisible AI companion
           </p>
           <div className="flex items-center gap-4 mt-8">
-            <a href="https://github.com/rayjaywolf/ghost/releases/download/v1.0.0/Ghost-1.2.0-arm64.dmg">
+            <Link href="/download">
               <button className="px-5 py-2 bg-[#FEFC00] text-[#1E1E1E] rounded-full font-bold hover:opacity-90 transition-opacity tracking-wide">
                 Download Now
               </button>
-            </a>
+            </Link>
             <button className="px-5 py-2 bg-[#212121] text-white rounded-full font-bold hover:bg-[#1e1e1e] transition-all border border-white/20 tracking-wide">
               See Features
             </button>
