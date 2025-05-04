@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Copy } from 'lucide-react'
 import { toast } from 'sonner'
 import CopyMacCommand from '../../components/CopyMacCommand'
+import { track } from '@vercel/analytics'
 
 const windowsDownload = {
     label: 'Windows',
@@ -33,6 +34,18 @@ const macCommand = 'xattr -c /Applications/Ghost.app'
 const handleCopyCommand = () => {
     navigator.clipboard.writeText(macCommand)
     toast('Command copied!')
+}
+
+const handleDownloadWindows = () => {
+    track('Download Windows')
+}
+
+const handleDownloadMacIntel = () => {
+    track('Download Mac Intel')
+}
+
+const handleDownloadMacArm = () => {
+    track('Download Mac ARM')
 }
 
 const Header = () => (
@@ -154,6 +167,7 @@ const DownloadPage = () => (
                             tabIndex={0}
                             aria-label={windowsDownload.button + ' for Windows'}
                             className="inline-block"
+                            onClick={handleDownloadWindows}
                         >
                             <button className="px-5 py-2 md:px-6 bg-[#FEFC00] text-[#1E1E1E] rounded-full font-bold hover:opacity-90 transition-opacity tracking-wide focus:outline-none focus:ring-2 focus:ring-[#1E1E1E] text-sm md:text-base">
                                 {windowsDownload.button}
@@ -177,6 +191,7 @@ const DownloadPage = () => (
                                     tabIndex={0}
                                     aria-label={d.button + ' for ' + d.label}
                                     className="inline-block"
+                                    onClick={d.label === 'Mac (Intel)' ? handleDownloadMacIntel : handleDownloadMacArm}
                                 >
                                     <button className="px-5 py-2 md:px-6 bg-[#FEFC00] text-[#1E1E1E] rounded-full font-bold hover:opacity-90 transition-opacity tracking-wide focus:outline-none focus:ring-2 focus:ring-[#1E1E1E] text-sm md:text-base w-full sm:w-auto">
                                         {d.button}

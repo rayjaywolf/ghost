@@ -207,7 +207,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative flex h-[calc(100vh-80px)] items-center justify-center overflow-hidden bg-[#1E1E1E] px-4">
+      <section className="relative flex h-[calc(100vh-100px)] items-center justify-center overflow-hidden bg-[#1E1E1E] px-4">
         <InteractiveGridPattern className={cn(
           "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)] md:[mask-image:radial-gradient(750px_circle_at_center,white,transparent)]", "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
         )}
