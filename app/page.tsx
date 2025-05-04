@@ -143,9 +143,9 @@ const Header = () => {
       </div>
 
       <nav className="flex items-center gap-8 text-lg font-bold">
-        <a href="#features" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">Features</a>
-        <a href="#shortcuts" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">Shortcuts</a>
-        <a href="#pricing" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">Pricing</a>
+        <a href="#features" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Features</a>
+        <a href="#shortcuts" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Shortcuts</a>
+        <a href="#pricing" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Pricing</a>
       </nav>
 
       <div className="flex items-center gap-4">
@@ -222,9 +222,11 @@ export default function Home() {
                 Download Now
               </button>
             </Link>
-            <button className="px-5 py-2 bg-[#212121] text-white rounded-full font-bold hover:bg-[#1e1e1e] transition-all border border-white/20 tracking-wide">
-              See Features
-            </button>
+            <Link href="/#features">
+              <button className="px-5 py-2 bg-[#212121] text-white rounded-full font-bold hover:bg-[#1e1e1e] transition-all border border-white/20 tracking-wide">
+                See Features
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -235,7 +237,7 @@ export default function Home() {
         <div className="w-full max-w-5xl px-4">
           <HeroVideoDialog
             videoSrc="/demo.mp4"
-            thumbnailSrc="https://i.ytimg.com/vi/1t1_a1BZ04o/hq720.jpg"
+            thumbnailSrc="/thumbnail.png"
             thumbnailAlt="Demo video thumbnail"
             animationStyle="from-center"
           />
@@ -571,20 +573,22 @@ export default function Home() {
             Docs
           </a>
           <a
-            href="#"
+            href="https://x.com/GhostScreenDev"
+            target="_blank"
             tabIndex={0}
             aria-label="Twitter"
-            className="text-[#1E1E1E] transition-colors font-inter text-sm font-bold outline-none focus:text-white"
+            className="text-[#1E1E1E] transition-colors font-inter text-sm font-bold outline-none"
             onClick={() => { }}
             onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); } }}
           >
             Twitter
           </a>
           <a
-            href="#"
+            href="https://t.me/ghostscreendev"
+            target="_blank"
             tabIndex={0}
             aria-label="Telegram"
-            className="text-[#1E1E1E] transition-colors font-inter text-sm font-bold outline-none focus:text-white"
+            className="text-[#1E1E1E] transition-colors font-inter text-sm font-bold outline-none"
             onClick={() => { }}
             onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); } }}
           >

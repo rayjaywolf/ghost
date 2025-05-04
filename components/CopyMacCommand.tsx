@@ -31,6 +31,22 @@ const CopyMacCommand = () => (
                         <Copy className="w-4 h-4" />
                     </button>
                 </div>
+                <div className="mt-4 text-white/80 text-sm font-inter">
+                    <span className="font-semibold text-yellow-300 font-inter">Still seeing </span>
+                    <span className="font-semibold font-inter">“macOS cannot verify that this app is free from malware”</span>
+                    <span className="font-inter">? Open <span className="font-semibold font-inter">System Settings</span>, click <span className="font-semibold font-inter">Privacy & Security</span>, scroll down and click the <span className="font-semibold font-inter">Open Anyway</span> button to confirm your intent to open or install the app. </span>
+                    <a
+                        href="https://macpaw.com/how-to/fix-macos-cannot-verify-that-app-is-free-from-malware"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-yellow-300 hover:text-yellow-400 underline ml-1"
+                        aria-label="Learn more about fixing macOS cannot verify that this app is free from malware"
+                        tabIndex={0}
+                    >
+                        Learn more
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 7l-10 10M17 7H7m10 0v10" /></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
