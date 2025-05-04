@@ -142,9 +142,9 @@ const Header = () => {
       </div>
 
       <nav className="flex items-center gap-8 text-lg font-bold">
-        <a href="#features" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">FEATURES</a>
-        <a href="#shortcuts" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">SHORTCUTS</a>
-        <a href="#pricing" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">PRICING</a>
+        <a href="#features" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">Features</a>
+        <a href="#shortcuts" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">Shortcuts</a>
+        <a href="#pricing" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">Pricing</a>
       </nav>
 
       <div className="flex items-center gap-4">
