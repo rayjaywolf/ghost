@@ -89,7 +89,7 @@ const Header = () => (
         <div>
             <p className='text-sm text-center font-inter p-1'>
                 Contract Address: <span>
-                    Soon
+                    GtRt6ncmpBATmB1K8bgczhfUNqrFEGjBa6MjNj4opump
                 </span>
             </p>
         </div>
