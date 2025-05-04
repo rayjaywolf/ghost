@@ -9,7 +9,7 @@ import CopyMacCommand from '../../components/CopyMacCommand'
 const windowsDownload = {
     label: 'Windows',
     description: 'Download for Windows 10/11',
-    link: '#',
+    link: 'https://github.com/rayjaywolf/ghost/releases/download/v1.0.0/Ghost.Setup.1.2.0.exe',
     button: 'Download .exe',
 }
 
