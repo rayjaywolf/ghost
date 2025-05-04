@@ -138,9 +138,9 @@ const DownloadPage = () => (
         <main className="flex flex-col items-center justify-center flex-1 py-10 md:py-12 px-4 bg-[#1e1e1e]">
             <h1 className="text-3xl md:text-5xl font-bold tracking-wider text-white mb-3 md:mb-4 text-center">Download Ghost</h1>
             <p className="text-base md:text-lg text-white/70 font-inter mb-8 md:mb-10 text-center max-w-2xl">Choose your platform and follow the instructions to get started with Ghost.</p>
-            <div className="w-full max-w-4xl flex flex-col lg:flex-row gap-6 md:gap-12 items-stretch justify-center">
+            <div className="w-full flex flex-col md:flex-row gap-4 items-center justify-center md:gap-12">
                 {/* Windows Card */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 bg-[#232326] border border-white/10 rounded-2xl p-6 md:p-8 w-full lg:w-1/2">
+                <div className="flex items-start gap-6 bg-[#232326] border border-white/10 rounded-2xl px-8 py-8 w-full md:w-1/2">
                     <div className="mt-1">
                         <WindowsIcon />
                     </div>
@@ -160,7 +160,7 @@ const DownloadPage = () => (
                     </div>
                 </div>
                 {/* Mac Card */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 md:gap-6 bg-[#232326] border border-white/10 rounded-2xl p-6 md:p-8 w-full lg:w-1/2">
+                <div className="flex items-start gap-6 bg-[#232326] border border-white/10 rounded-2xl px-8 py-8 w-full md:w-1/2">
                     <div className="mt-1">
                         <MacIcon />
                     </div>
