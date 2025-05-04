@@ -142,8 +142,8 @@ const Header = () => {
       </div>
 
       <nav className="flex items-center gap-8 text-lg font-bold">
-        <a href="#about" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">ABOUT</a>
         <a href="#features" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">FEATURES</a>
+        <a href="#shortcuts" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">SHORTCUTS</a>
         <a href="#pricing" className="text-[#1E1E1E] hover:opacity-80 cursor-pointer">PRICING</a>
       </nav>
 
@@ -353,7 +353,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative flex flex-col items-center justify-center py-20 bg-[#1e1e1e] border-t border-white/10 px-4 w-full">
+      <section id="shortcuts" className="relative flex flex-col items-center justify-center py-20 bg-[#1e1e1e] border-t border-white/10 px-4 w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 tracking-wider">Keyboard Shortcuts</h2>
         <p className="text-white/80 text-lg font-inter mb-10 text-center max-w-2xl">
           Ghost is designed to be as unobtrusive as possible. Here are the keyboard shortcuts you can use to control it.
