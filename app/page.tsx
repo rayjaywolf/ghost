@@ -234,7 +234,7 @@ export default function Home() {
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 tracking-wider">SEE IT IN ACTION</h2>
         <div className="w-full max-w-5xl px-4">
           <HeroVideoDialog
-            videoSrc="https://www.youtube.com/embed/1t1_a1BZ04o?si=hhKc1VGandFI2U_W"
+            videoSrc="/demo.mp4"
             thumbnailSrc="https://i.ytimg.com/vi/1t1_a1BZ04o/hq720.jpg"
             thumbnailAlt="Demo video thumbnail"
             animationStyle="from-center"
@@ -324,7 +324,9 @@ export default function Home() {
           <div className='w-1/2'>
           </div>
           <div className='w-1/2'>
-            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-lg border border-white/10'></div>
+            <div className='bg-[#1e1e1e] h-[320px] w-full mb-8 rounded-lg border border-white/10'>
+              <video src="/complexity.mp4" autoPlay muted loop className='w-full h-full object-cover rounded-lg' />
+            </div>
             <h2 className='text-white text-right text-3xl font-bold tracking-wider mb-4'>
               Time/Space Complexity Analysis
             </h2>
