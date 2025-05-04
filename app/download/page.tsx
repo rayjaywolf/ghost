@@ -140,7 +140,7 @@ const DownloadPage = () => (
             <p className="text-base md:text-lg text-white/70 font-inter mb-8 md:mb-10 text-center max-w-2xl">Choose your platform and follow the instructions to get started with Ghost.</p>
             <div className="w-full flex flex-col md:flex-row gap-4 items-center justify-center md:gap-12">
                 {/* Windows Card */}
-                <div className="flex items-start gap-6 bg-[#232326] border border-white/10 rounded-2xl px-8 py-8 w-full md:w-1/2">
+                <div className="flex items-start gap-6 bg-[#232326] border border-white/10 rounded-2xl px-8 py-8 w-full md:w-auto">
                     <div className="mt-1">
                         <WindowsIcon />
                     </div>
@@ -160,7 +160,7 @@ const DownloadPage = () => (
                     </div>
                 </div>
                 {/* Mac Card */}
-                <div className="flex items-start gap-6 bg-[#232326] border border-white/10 rounded-2xl px-8 py-8 w-full md:w-1/2">
+                <div className="flex items-start gap-6 bg-[#232326] border border-white/10 rounded-2xl px-8 py-8 w-full md:w-auto">
                     <div className="mt-1">
                         <MacIcon />
                     </div>
