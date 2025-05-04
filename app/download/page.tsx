@@ -47,6 +47,7 @@ const Header = () => (
             <a href="/#features" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Features</a>
             <a href="/#shortcuts" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Shortcuts</a>
             <a href="/#pricing" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Pricing</a>
+            <a href="https://ghostscreen.gitbook.io/ghost-docs" target="_blank" className=" tracking-wider text-[#1E1E1E] hover:opacity-80 cursor-pointer">Docs</a>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -81,7 +82,8 @@ const Footer = () => (
         </div>
         <nav className="flex flex-row gap-4 md:gap-6 items-center justify-center w-full md:w-auto mb-4 md:mb-0">
             <a
-                href="#"
+                href="https://ghostscreen.gitbook.io/ghost-docs"
+                target="_blank"
                 tabIndex={0}
                 aria-label="Docs"
                 className="text-[#1E1E1E] transition-colors font-inter text-sm font-bold outline-none focus:text-white"
